@@ -1,4 +1,4 @@
-# Stuff I Wrote Up Reading K&R
+# Stuff I Wrote Up While Reading K&R
 
 ## If You're Still Somehow Here
 
