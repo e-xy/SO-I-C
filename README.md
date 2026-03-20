@@ -7,6 +7,7 @@
 ccr() {
   local file
   file=$(fd -t f -e c | fzf) && gcc "$file" -o "${file%.*}.o" && "./${file%.*}.o"
+
   # NOTE: uncomment this line if you're using LLVM
   # file=$(fd -t f -e c | fzf) && clang "$file" -o "${file%.*}.o" && "./${file%.*}.o"
 }
@@ -21,6 +22,9 @@ cclr() {
 cppr() {
   local file
   file=$(fd -t f -e cpp -e cc -e cxx | fzf) && g++ "$file" -o "${file%.*}.o" && "./${file%.*}.o"
+
+  # file=$(fd -t f -e cpp -e cc -e cxx | fzf) && clang++ "$file" -o "${file%.*}.o" && "./${file%.*}.o"
+  # NOTE: uncomment this line if you're using LLVM
 }
 
 # clean up output files
