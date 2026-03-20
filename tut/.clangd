@@ -1,0 +1,17 @@
+CompileFlags:
+  Add: [
+    "-xc",          # files are .c
+    "-std=c17",     # C17 standard
+    "Iinclude",     # include the "include" directory
+    "-Wall",        # Warnings all
+    "-Wextra"       # Warnings extra
+  ]
+  Remove: [
+    "-W*"           # get rid of warning flag conflicts
+  ]
+
+Index:
+  Background: Build   # index project in bg
+
+Diagnostics:
+  UnusedIncludes: Strict    # Highlight unused #include dirs
