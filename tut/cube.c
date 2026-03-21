@@ -40,6 +40,7 @@
 
 double f_time;
 volatile int running = 1;
+int canvas[100][100];
 /* --------------- END Includes n Config --------------- */
 
 /* clear this shit */
@@ -117,7 +118,6 @@ struct Line3
 struct Line3 make_line(struct Pt3 r_0, struct Vec3 v)
 {
 	struct Line3 l;
-	/* compound literal for starting pt */
 	l.r_0 = r_0;
 	l.v = v;
 	return l;
