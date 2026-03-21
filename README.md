@@ -1,6 +1,13 @@
 # Stuff I Wrote Up While Reading K&R
 
+## Fun Pieces I've Written So Far
+
+Some stuff I wrote for fun to practice C alongside the code samples in K&R.
+
+- [3D Spinning Cube] (tut/cube.c)
+
 ## Random Stuff To Add To Your `.bashrc` :)
+
 ```bash
 # -------- C --------
 # compile n exec
@@ -43,6 +50,7 @@ alias rlss="du -ah . | sort -hr | head -n 10"   # hidden files
 Make sure either the [GNU Compiler Collection](https://www.gnu.org/) or the [LLVM Project](https://llvm.org/) is installed on your computer. This repo  mostly follows the `-std=c17` standard, with some exceptions in the `/projects` folder. Oh, and also install [fzf](https://github.com/junegunn/fzf) if it's somehow not already on your system! :D
 
 Most scripts use the following `.clangd` configuration:
+
 ```yaml
 CompileFlags:
   Add: [
@@ -66,6 +74,7 @@ BasedOnStyle: LLVM          # llvm style
 
 BreakBeforeBraces: Allman   # allman braces
 ```
+
 Each folder has their respective `.clangd` file in case of changes.
 
 ## If You're Still Somehow Here
