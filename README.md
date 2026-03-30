@@ -4,7 +4,8 @@
 
 Some stuff I wrote for fun to practice C alongside the code samples in K&R.
 
-- [3D Spinning Cube] (tut/cube.c)
+- [3D ASCII Saturn](tut/cube.c) | 3D interactive Saturn rendered in ASCII art.
+- [Grad Descent Into Madness](tut) | Chaotic non-deterministic version of Cornell's critter A*game. Reinforcement Learning + Genetic Algorithms instead of A* path-finding.
 
 ## Random Stuff To Add To Your `.bashrc` :)
 
