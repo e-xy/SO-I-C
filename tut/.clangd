@@ -2,7 +2,7 @@ CompileFlags:
   Add: [
     "-xc",          # files are .c
     "-std=c17",     # C17 standard
-    "Iinclude",     # include the "include" directory
+    "-Iinclude",     # include the "include" directory
     "-Wall",        # warnings all
     "-Wextra"       # warnings extra
   ]
@@ -15,7 +15,3 @@ Index:
 
 Diagnostics:
   UnusedIncludes: Strict    # highlight unused #include dirs
-
-BasedOnStyle: LLVM          # llvm style
-
-BreakBeforeBraces: Allman   # allman braces
