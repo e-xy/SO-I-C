@@ -1,0 +1,31 @@
+name: C Compile Check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Install GCC
+        run: sudo apt-get update && sudo apt-get install -y gcc
+
+      - name: Compile all C files
+        run: |
+          find . -name "*.c" > sources.txt
+          if [ ! -s sources.txt ]; then
+            echo "No C files found."
+            exit 0
+          fi
+
+          mkdir -p build
+
+          while IFS= read -r file; do
+            echo "Compiling $file"
+            gcc -Wall -Wextra -std=c17 -c "$file" -o "build/$(basename "$file" .c).o"
+          done < sources.txt
